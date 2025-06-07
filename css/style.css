@@ -137,7 +137,7 @@
 
 .m1 p,
 .m2 p {
-    width: 100%;
+	width: 100%;
 }
 
 .m2 {
@@ -154,20 +154,21 @@ h1 {
 
 h2 {
 	font-weight: 600;
+	text-shadow: 3px 3px 0px var(--accent-color);
 }
 
 .q-span {
-    font-style: italic;
+	font-style: italic;
 }
 
 .q-span-k {
-    color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 .m-image {
 	max-width: 800px;
 	width: 100%;
-    box-shadow: 1px 0px 14px 6px rgba(169, 24, 23, 0.68);
+	box-shadow: 0px 0px 14px 6px rgba(169, 24, 23, 0.68);
 }
 
 .quote-block {
@@ -195,7 +196,7 @@ h2 {
 	left: 15px;
 	font-size: 50px;
 	font-weight: bold;
-    font-style: normal;
+	font-style: normal;
 	line-height: 1;
 	color: var(--accent-color);
 	padding: 0 0.2em;
