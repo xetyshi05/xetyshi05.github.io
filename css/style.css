@@ -4,6 +4,10 @@
 	--accent-color: #a91817;
 }
 
+html {
+    background-color: black;
+}
+
 /* PRELOADER */
 
 #preloader {
