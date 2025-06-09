@@ -19,9 +19,16 @@ window.addEventListener("load", () => {
 
 	const nav_button = document.getElementById("navbutton");
 	const menu = document.getElementById("menu");
+	const nav_close_button = document.getElementById("navclosebutton");
 
 	nav_button.addEventListener("click", () => {
-		const isOpen = menu.classList.toggle("menu-open");
+		menu.classList.add("menu-open");
+		nav_button.classList.add("nav-button-novisible");
+	});
+
+	nav_close_button.addEventListener("click", () => {
+		menu.classList.remove("menu-open");
+		nav_button.classList.remove("nav-button-novisible");
 	});
 
 	document.addEventListener("click", (e) => {
@@ -31,7 +38,20 @@ window.addEventListener("load", () => {
 			!nav_button.contains(e.target)
 		) {
 			menu.classList.remove("menu-open");
+			nav_button.classList.remove("nav-button-novisible");
 		}
+	});
+
+	document.querySelectorAll('a[href^="#"]').forEach((link) => {
+		link.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			const targetID = link.getAttribute("href").slice(1);
+			const targetEl = document.getElementById(targetID);
+			if (targetEl) {
+				targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+			}
+		});
 	});
 
 	document.querySelectorAll("#menu a").forEach((link) => {
@@ -79,4 +99,34 @@ window.addEventListener("load", () => {
 	document.querySelectorAll(".scroll-img, .quote-block").forEach((el) => {
 		observer2.observe(el);
 	});
+
+	// FFJ Observer
+
+	const ffj_container = document.querySelector(".ffj");
+	const ffj_spans = Array.from(ffj_container.querySelectorAll("span"));
+
+	const observer_ffj = new IntersectionObserver(
+		(entries, obs) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+
+				ffj_spans.forEach((span, i) => {
+					setTimeout(() => {
+						span.classList.add("ffj-visible");
+					}, i * 700);
+				});
+
+				const ffj_totalDelay = ffj_spans.length * 700;
+				setTimeout(() => {
+					ffj_spans.forEach((span) => span.classList.add("ffj-pulse"));
+				}, ffj_totalDelay);
+				obs.unobserve(ffj_container);
+			});
+		},
+		{
+			threshold: 1.0,
+		}
+	);
+
+	observer_ffj.observe(ffj_container);
 });

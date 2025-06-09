@@ -7,7 +7,7 @@
 html {
 	background-color: black;
 	font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* PRELOADER */
@@ -50,17 +50,23 @@ html {
 	background: rgb(35, 35, 35);
 	border-radius: 7px;
 	cursor: pointer;
-	z-index: 1001; /* над меню */
+	z-index: 1001;
 	height: 40px;
 	width: 40px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: opacity 0.1s ease-out;
 }
 
 .nav-button img {
 	height: 35px;
 	width: 35px;
+}
+
+.nav-button-novisible {
+	opacity: 0;
+	cursor: default;
 }
 
 .menu {
@@ -79,6 +85,26 @@ html {
 	padding: 75px 15px;
 }
 
+.nav-close-button {
+	position: absolute; /* абсолютное позиционирование */
+	top: 15px; /* 15px от верхней границы .menu */
+	right: 15px;
+	background: rgb(35, 35, 35);
+	border-radius: 7px;
+	cursor: pointer;
+	z-index: 1001;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-close-button img {
+	height: 35px;
+	width: 35px;
+}
+
 .menu-h1 {
 	font-family: "Russo One", sans-serif;
 }
@@ -91,7 +117,7 @@ html {
 .menu-h2 {
 	font-weight: 500;
 	text-shadow: 1px 1px 0px var(--accent-color);
-    padding-left: 15px;
+	padding-left: 15px;
 }
 
 .menu-h2 a {
@@ -100,7 +126,7 @@ html {
 }
 
 .menu-open {
-    left: 0;
+	left: 0;
 }
 
 /* HEADER */
@@ -196,7 +222,9 @@ html {
 }
 
 .m1,
-.m2 {
+.m2,
+.m3,
+.m4 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -204,11 +232,15 @@ html {
 }
 
 .m1 p,
-.m2 p {
+.m2 p,
+.m3 p,
+.m4 p {
 	width: 100%;
 }
 
-.m2 {
+.m2,
+.m3,
+.m4 {
 	margin-top: 50px;
 }
 
@@ -312,6 +344,64 @@ h2 {
 		height: 40px;
 		width: 40px;
 	}
+}
+
+/* FFJ */
+
+.ffj {
+	font-family: "Russo One", sans-serif;
+	font-size: 55px;
+	color: var(--accent-color);
+}
+
+.ffj span {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.ffj span.ffj-visible {
+	opacity: 1;
+}
+
+.ffj span.ffj-pulse {
+	animation: ffjPulse 3s ease-out;
+}
+
+@keyframes ffjPulse {
+	0%,
+	100% {
+		color: var(--accent-color);
+		text-shadow: 0 0 0px #ff0000;
+	}
+	15%,
+	85% {
+		color: #ff0000;
+		text-shadow: 0 0 15px #ff0000;
+	}
+}
+
+/* Footer */
+
+.footer {
+	height: 200px;
+	width: 100vw;
+	background-color: rgb(20, 20, 20);
+	position: relative;
+	z-index: 2;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: clamp(16px, 4vw, 20px);
+	font-weight: 500;
+    border-top: 1px solid white;
+}
+
+.footer span {
+	max-width: 1200px;
+	padding: 0px 30px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 /* Анимация при скролле */
