@@ -215,7 +215,7 @@ html {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-image: url("../img/fon2.jpg");
+	background-image: url("../img/fon.jpg");
 	z-index: -1;
 }
 
@@ -252,6 +252,7 @@ h1 {
 
 h2 {
 	font-weight: 600;
+	font-size: clamp(19px, 4vw, 27px);
 	text-shadow: 3px 3px 0px var(--accent-color);
 	text-align: center;
 }
@@ -344,6 +345,19 @@ h2 {
 	}
 }
 
+.interview-href {
+	color: var(--accent-color);
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+
+.interview-href:hover {
+	color: var(--accent-color);
+	text-decoration: none;
+	color: red;
+	text-shadow: 0 0 10px #ff0000;
+}
+
 /* FFJ */
 
 .ffj {
@@ -392,14 +406,14 @@ h2 {
 	justify-content: center;
 	font-size: clamp(16px, 4vw, 20px);
 	font-weight: 500;
-    border-top: 1px solid white;
+	border-top: 1px solid white;
 }
 
 .footer span {
 	max-width: 1200px;
 	padding: 0px 30px;
-    text-align: center;
-    line-height: 1.5;
+	text-align: center;
+	line-height: 1.5;
 }
 
 /* Анимация при скролле */
@@ -483,4 +497,24 @@ h2 {
 	50% {
 		border-top-color: red;
 	}
+}
+
+/* =====================================
+                Интервью 
+ =====================================               
+                */
+
+.header-int {
+	font-size: clamp(25px, 6.5vw, 54px);
+}
+
+.m-int {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 35px;
+}
+
+.m-int p {
+	width: 100%;
 }
