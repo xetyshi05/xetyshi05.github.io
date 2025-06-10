@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
-
 :root {
 	--accent-color: #a91817;
 }
@@ -364,7 +362,7 @@ h2 {
 }
 
 .ffj span.ffj-pulse {
-	animation: ffjPulse 3s ease-out;
+	animation: ffjPulse 2s ease-out;
 }
 
 @keyframes ffjPulse {
@@ -383,7 +381,7 @@ h2 {
 /* Footer */
 
 .footer {
-	height: 200px;
+	height: 150px;
 	width: 100vw;
 	background-color: rgb(20, 20, 20);
 	position: relative;

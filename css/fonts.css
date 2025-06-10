@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/Montserrat-VariableFont_wght.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/Montserrat-Italic-VariableFont_wght.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/RussoOne-Regular.woff2") format("woff");
+}

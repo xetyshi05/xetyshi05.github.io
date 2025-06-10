@@ -58,6 +58,7 @@ window.addEventListener("load", () => {
 		link.addEventListener("click", () => {
 			if (menu.classList.contains("menu-open")) {
 				menu.classList.remove("menu-open");
+                nav_button.classList.remove("nav-button-novisible");
 			}
 		});
 	});
