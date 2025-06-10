@@ -160,7 +160,7 @@ html {
 .header.visible div {
 	opacity: 1;
 	transform: translateY(0);
-	animation: pulse-red 1s ease-out 1;
+	animation: pulse-red 2s ease-out 1;
 	animation-delay: 0.5s;
 }
 
@@ -345,6 +345,13 @@ h2 {
 	}
 }
 
+.interview-p {
+	padding: 10px 10px;
+	border: 2px solid white;
+	border-radius: 5px;
+	text-align: center;
+}
+
 .interview-href {
 	color: var(--accent-color);
 	text-decoration: none;
@@ -352,8 +359,6 @@ h2 {
 }
 
 .interview-href:hover {
-	color: var(--accent-color);
-	text-decoration: none;
 	color: red;
 	text-shadow: 0 0 10px #ff0000;
 }
@@ -512,9 +517,63 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 35px;
+	gap: 50px;
 }
 
 .m-int p {
 	width: 100%;
+}
+
+.m-interview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	border: 2px solid white;
+	border-radius: 5px;
+	padding: 20px 20px;
+}
+
+.m-interview img {
+	margin: 15px 0px;
+}
+
+.speaker-1 {
+	font-style: italic;
+}
+
+.back-button {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	background: rgb(35, 35, 35);
+	border-radius: 7px;
+	z-index: 1001;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.back-button img {
+	height: 35px;
+	width: 35px;
+}
+
+.m-back-button {
+	color: var(--accent-color);
+	text-decoration: none;
+	padding: 15px 15px;
+	border: 2px solid var(--accent-color);
+	font-weight: 500;
+	border-radius: 7px;
+	transition: all 0.2s linear;
+}
+
+.m-back-button:hover {
+	border-color: red;
+	box-shadow: 0 0 15px 4px red;
+	color: red;
+	text-shadow: 0 0 10px #ff0000;
 }
