@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+body{margin:0;background:#fafaf7;color:#111;font-family:'Inter',system-ui,sans-serif}
+a{color:inherit}
+.u{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#b9b9b2}
+.u:hover{text-decoration-color:#111}
+.gh{display:inline-flex;align-items:center;gap:8px}
+:focus-visible{outline:2px solid #111;outline-offset:3px}
+.page{max-width:1080px;margin:0 auto;padding:0 32px 64px}
+.head{padding:96px 0 72px;display:flex;flex-direction:column;gap:24px}
+h1{margin:0;font-size:44px;font-weight:700;letter-spacing:-.02em}
+.head a{font-size:16px;align-self:flex-start}
+.project{border-top:1px solid #dcdcd5;padding:48px 0;display:flex;flex-direction:column;gap:32px}
+.row{display:flex;flex-wrap:wrap;gap:16px 48px;align-items:baseline}
+h2{margin:0;flex:1 1 280px;font-size:28px;font-weight:600;letter-spacing:-.01em}
+.info{flex:2 1 420px;display:flex;flex-direction:column;gap:12px}
+.info p{margin:0;font-size:17px;line-height:1.55}
+.info .stack{font-size:14px;color:#666}
+.links{display:flex;flex-wrap:wrap;gap:24px;font-size:16px;font-weight:500}
+.shots{display:flex;flex-wrap:wrap;gap:24px}
+.shots img{flex:1 1 440px;min-width:0;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:8px;display:block}
+.note{margin:0;font-size:13px;color:#666}
+@media (max-width:600px){.page{padding:0 16px 48px}h1{font-size:32px}.head{padding:56px 0 40px}}
